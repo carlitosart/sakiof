@@ -1,0 +1,18 @@
+POST http://localhost:8083/user
+Accept: application/json
+Content-Type: application/json
+
+{
+    "firstName":"Carlos N",
+    "lastName":"Peralta",
+    "email":"carlos@gmail.com",
+    "address":"direccion 1",
+    "address2":"direccion 2",
+    "district":"distrito",
+    "cityId":"2",
+    "postalCode":"1010",
+    "phone":"77713245",
+    "storeId":"1",
+    "password":"password"
+}
+###
