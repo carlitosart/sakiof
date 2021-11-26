@@ -1,6 +1,7 @@
 package com.sakila.sakila.api;
 
 import com.sakila.sakila.bl.UserService;
+import com.sakila.sakila.dto.CustomerModel;
 import com.sakila.sakila.dto.Film;
 import com.sakila.sakila.dto.UserRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,5 +21,9 @@ public class UserApi {
     @PostMapping( produces = MediaType.APPLICATION_JSON_VALUE)
     public void signUp(@RequestBody UserRequest userRequest){
         userService.signUp(userRequest);
+    }
+    @GetMapping( produces = MediaType.APPLICATION_JSON_VALUE)
+    public CustomerModel getProfile(){
+        return userService.getUserId();
     }
 }

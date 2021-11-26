@@ -1,3 +1,5 @@
+
+### CREAR USUARIO
 POST http://localhost:8083/user
 Accept: application/json
 Content-Type: application/json
@@ -15,4 +17,8 @@ Content-Type: application/json
     "storeId":"1",
     "password":"password"
 }
-###
+
+### Obtener INFOR DE CUSTOMER
+GET http://localhost:8083/user
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJjYXJsb3NAZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImlkIjo2MDAsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIzN2U3ZjkwMi1lNzg5LTQzYzEtYTEzMS0zMTE0ZTQ5MDc0MTUiLCJlbWFpbCI6ImNhcmxvc0BnbWFpbC5jb20iLCJjbGllbnRfaWQiOiJzYWtpbGEifQ.EZ7LsmGtcGaB3k0_4PoCtpnqgA0vK1_kz6HrHWhtU_0

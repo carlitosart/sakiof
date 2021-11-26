@@ -8,7 +8,9 @@ import com.sakila.sakila.dto.UserInformation;
 import com.sakila.sakila.dto.UserRequest;
 import com.vividsolutions.jts.geom.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -30,6 +32,16 @@ public class UserService implements UserDetailsService {
     public UserService(CustomerRepository customerRepository,AddressRepository addressRepository){
         this.customerRepository = customerRepository;
         this.addressRepository=addressRepository;
+    }
+
+
+    public CustomerModel getUserId(){
+        Authentication a= SecurityContextHolder.getContext().getAuthentication();
+        UserInformation userInformation=(UserInformation) a.getPrincipal();
+        var user = customerRepository.findById(userInformation.getIdCustomer());
+        if (user.isPresent()){
+            return user.get();
+        }else return null;
     }
 
     @Override

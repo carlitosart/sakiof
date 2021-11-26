@@ -40,6 +40,7 @@ public class FilmBl {
         RentalResponse rentalResponse=new RentalResponse();
         rentalResponse.setRented(new ArrayList<>());
         rentalResponse.setNotRented(new ArrayList<>());
+        //Realiza un for entre los id enviados en el endpoint
         for(Integer filmId: rentalRequest.getFilmIds()){
             try{
                 Integer inventoryId=filmRepository.getInventoryId(filmId,countryId);

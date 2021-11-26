@@ -1,11 +1,28 @@
-###OBTENER TODOS LOS FILMS
+###OBTENER TODOS LOS FILMS // EN TODOS LOS ENDPOINTS SE PONE EL ID DEL COUNTRY >:V
+###ULTIMAS 10 PELICULAS INCORPORADAS AL CATALOGO
+GET http://localhost:8083/film?country_id=8&page=0
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJjYXJsb3NAZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImlkIjo2MDAsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIzN2U3ZjkwMi1lNzg5LTQzYzEtYTEzMS0zMTE0ZTQ5MDc0MTUiLCJlbWFpbCI6ImNhcmxvc0BnbWFpbC5jb20iLCJjbGllbnRfaWQiOiJzYWtpbGEifQ.EZ7LsmGtcGaB3k0_4PoCtpnqgA0vK1_kz6HrHWhtU_0
+
+###OBTENER el FILM POR NOMBRE PELICULA Y ACTOR
 GET http://localhost:8083/film?country_id=8&page=0&query=ACADEMY&actor=PENELOPE
 Accept: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJjYXJsb3NAZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImlkIjo2MDAsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIzN2U3ZjkwMi1lNzg5LTQzYzEtYTEzMS0zMTE0ZTQ5MDc0MTUiLCJlbWFpbCI6ImNhcmxvc0BnbWFpbC5jb20iLCJjbGllbnRfaWQiOiJzYWtpbGEifQ.EZ7LsmGtcGaB3k0_4PoCtpnqgA0vK1_kz6HrHWhtU_0
 
-###LO MAS RENTADO SEGUN FECHA (SE ENVIA FECHA)
+###OBTENER FILM POR NOMBRE
+GET http://localhost:8083/film?country_id=8&page=0&query=ACADEMY
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJjYXJsb3NAZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImlkIjo2MDAsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIzN2U3ZjkwMi1lNzg5LTQzYzEtYTEzMS0zMTE0ZTQ5MDc0MTUiLCJlbWFpbCI6ImNhcmxvc0BnbWFpbC5jb20iLCJjbGllbnRfaWQiOiJzYWtpbGEifQ.EZ7LsmGtcGaB3k0_4PoCtpnqgA0vK1_kz6HrHWhtU_0
 
-GET http://localhost:8083/film/most-rented?country_id=8&page=0&date=2021-11-20
+###OBTENER FILM POR ACTOR
+GET http://localhost:8083/film?country_id=8&page=0&actor=PENELOPE
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJjYXJsb3NAZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImlkIjo2MDAsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIzN2U3ZjkwMi1lNzg5LTQzYzEtYTEzMS0zMTE0ZTQ5MDc0MTUiLCJlbWFpbCI6ImNhcmxvc0BnbWFpbC5jb20iLCJjbGllbnRfaWQiOiJzYWtpbGEifQ.EZ7LsmGtcGaB3k0_4PoCtpnqgA0vK1_kz6HrHWhtU_0
+
+
+
+###OBTENER PELICULAS POR LO MAS RENTADO SEGUN FECHA (SE ENVIA FECHA)
+GET http://localhost:8083/film/most-rented?country_id=8&page=0&date=2021-10-01
 Accept: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJjYXJsb3NAZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImlkIjo2MDAsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiIzN2U3ZjkwMi1lNzg5LTQzYzEtYTEzMS0zMTE0ZTQ5MDc0MTUiLCJlbWFpbCI6ImNhcmxvc0BnbWFpbC5jb20iLCJjbGllbnRfaWQiOiJzYWtpbGEifQ.EZ7LsmGtcGaB3k0_4PoCtpnqgA0vK1_kz6HrHWhtU_0
 
